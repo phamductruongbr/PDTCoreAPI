@@ -158,33 +158,41 @@ function preAddNew() {
 //Valdidation using jquery  
 function validate() {
     var isValid = true;
-    if ($('#MaNhanVien').val().trim() == "") {
+    if ($('#MaNhanVien').val().trim() == "" || $('#MaNhanVien').val().length > 50) {
         $('#MaNhanVien').css('border-color', 'Red');
+        $('#MaMessage').text('Mã nhân viên không được để trống !');
         isValid = false;
     }
     else {
         $('#MaNhanVien').css('border-color', 'lightgrey');
+        $('#MaMessage').text('');
     }
-    if ($('#HoTenNhanVien').val().trim() == "") {
+    if ($('#HoTenNhanVien').val().trim() == "" || $('#HoTenNhanVien').val().length > 100) {
         $('#HoTenNhanVien').css('border-color', 'Red');
+        $('#TenMessage').text('Họ tên nhân viên không được để trống !');
         isValid = false;
     }
     else {
         $('#HoTenNhanVien').css('border-color', 'lightgrey');
+        $('#TenMessage').text('');
     }
-    if ($('#DiaChi').val().trim() == "") {
+    if ($('#DiaChi').val().trim() == "" || $('#DiaChi').val().length > 500) {
         $('#DiaChi').css('border-color', 'Red');
+        $('#DCMessage').text('Địa chỉ không được để trống !');
         isValid = false;
     }
     else {
         $('#DiaChi').css('border-color', 'lightgrey');
+        $('#DCMessage').text('');
     }
-    if ($('#PhongBan').val().trim() == "") {
+    if ($('#PhongBan').val().trim() == "" || $('#DiaChi').val().length > 50) {
         $('#PhongBan').css('border-color', 'Red');
+        $('#PBMessage').text('Phòng ban không được để trống !');
         isValid = false;
     }
     else {
         $('#PhongBan').css('border-color', 'lightgrey');
+        $('#PBMessage').text('');
     }
     return isValid;
 }

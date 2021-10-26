@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDTCoreAPI.ServerAPI", "PDTCoreAPI.ServerAPI\PDTCoreAPI.ServerAPI.csproj", "{EADFD3E3-BD9B-4A41-908C-6F43A78DEF46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDTCoreAPI.ServerAPI", "PDTCoreAPI.ServerAPI\PDTCoreAPI.ServerAPI.csproj", "{EADFD3E3-BD9B-4A41-908C-6F43A78DEF46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDTCoreAPI.ServerData", "PDTCoreAPI.ServerData\PDTCoreAPI.ServerData.csproj", "{C1B86757-1ECE-41AD-811C-71A458B6470C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDTCoreAPI.ServerData", "PDTCoreAPI.ServerData\PDTCoreAPI.ServerData.csproj", "{C1B86757-1ECE-41AD-811C-71A458B6470C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{98C4111A-9D1D-4FE1-AD1E-CBE687EB09F2}"
 	ProjectSection(SolutionItems) = preProject

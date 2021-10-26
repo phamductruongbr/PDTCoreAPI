@@ -124,7 +124,7 @@ function Update() {
 
 //function for deleting employee's record  
 function Delele(ID) {
-    var ans = confirm("Are you sure you want to delete this Record?");
+    var ans = confirm("Bạn có chắc chắn muốn xoá nhân viên đang chọn?");
     if (ans) {
         $.ajax({
             url: "/NhanVien/Delete/" + ID,
@@ -160,34 +160,57 @@ function validate() {
     var isValid = true;
     if ($('#MaNhanVien').val().trim() == "" || $('#MaNhanVien').val().length > 50) {
         $('#MaNhanVien').css('border-color', 'Red');
-        $('#MaMessage').text('Mã nhân viên không được để trống !');
+        if ($('#MaNhanVien').val().trim() == "") {
+            $('#MaMessage').text('Mã nhân viên không được để trống !');
+        }
+        if ($('#MaNhanVien').val().length > 50) {
+            $('#MaMessage').text('Mã nhân viên tối đa 50 kí tự !');
+        }
         isValid = false;
     }
     else {
         $('#MaNhanVien').css('border-color', 'lightgrey');
         $('#MaMessage').text('');
     }
+
+
     if ($('#HoTenNhanVien').val().trim() == "" || $('#HoTenNhanVien').val().length > 100) {
         $('#HoTenNhanVien').css('border-color', 'Red');
-        $('#TenMessage').text('Họ tên nhân viên không được để trống !');
+        if ($('#HoTenNhanVien').val().trim() == "") {
+            $('#TenMessage').text('Họ tên nhân viên không được để trống !');
+        }
+        if ($('#HoTenNhanVien').val().length > 50) {
+            $('#TenMessage').text('Họ tên nhân viên tối đa 100 kí tự !');
+        }
         isValid = false;
     }
     else {
         $('#HoTenNhanVien').css('border-color', 'lightgrey');
         $('#TenMessage').text('');
     }
-    if ($('#DiaChi').val().trim() == "" || $('#DiaChi').val().length > 500) {
+
+
+    if ($('#DiaChi').val().length > 500) {
         $('#DiaChi').css('border-color', 'Red');
-        $('#DCMessage').text('Địa chỉ không được để trống !');
+        if ($('#DiaChi').val().length > 500) {
+            $('#DCMessage').text('Địa chỉ tối đa 500 kí tự !');
+        }
         isValid = false;
     }
     else {
         $('#DiaChi').css('border-color', 'lightgrey');
         $('#DCMessage').text('');
     }
-    if ($('#PhongBan').val().trim() == "" || $('#DiaChi').val().length > 50) {
+
+
+    if ($('#PhongBan').val().trim() == "" || $('#PhongBan').val().length > 50) {
         $('#PhongBan').css('border-color', 'Red');
-        $('#PBMessage').text('Phòng ban không được để trống !');
+        if ($('#PhongBan').val().trim() == "") {
+            $('#PBMessage').text('Phòng ban không được để trống !');
+        }
+        if ($('#PhongBan').val().length > 50) {
+            $('#PBMessage').text('Phòng ban tối đa 100 kí tự !');
+        }
         isValid = false;
     }
     else {
